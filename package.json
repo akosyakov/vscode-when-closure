@@ -1,0 +1,523 @@
+{
+  "name": "vscode-when-closure",
+  "displayName": "vscode-when-closure",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.editorFocus",
+        "title": "TEST editorFocus",
+        "when": "editorFocus"
+      },
+      {
+        "command": "extension.editorTextFocus",
+        "title": "TEST editorTextFocus",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.textInputFocus",
+        "title": "TEST textInputFocus",
+        "when": "textInputFocus"
+      },
+      {
+        "command": "extension.inputFocus",
+        "title": "TEST inputFocus",
+        "when": "inputFocus"
+      },
+      {
+        "command": "extension.editorHasSelection",
+        "title": "TEST editorHasSelection",
+        "when": "editorHasSelection"
+      },
+      {
+        "command": "extension.editorHasMultipleSelections",
+        "title": "TEST editorHasMultipleSelections",
+        "when": "editorHasMultipleSelections"
+      },
+      {
+        "command": "extension.editorReadOnly",
+        "title": "TEST editorReadOnly",
+        "when": "editorReadOnly"
+      },
+      {
+        "command": "extension.editorLangId",
+        "title": "TEST editorLangId",
+        "when": "editorLangId == typescript"
+      },
+      {
+        "command": "extension.isInDiffEditor",
+        "title": "TEST isInDiffEditor",
+        "when": "isInDiffEditor"
+      },
+      {
+        "command": "extension.isLinux",
+        "title": "TEST isLinux",
+        "when": "isLinux"
+      },
+      {
+        "command": "extension.isMac",
+        "title": "TEST isMac",
+        "when": "isMac"
+      },
+      {
+        "command": "extension.isWindows",
+        "title": "TEST isWindows",
+        "when": "isWindows"
+      },
+      {
+        "command": "extension.inDebugMode",
+        "title": "TEST inDebugMode",
+        "when": "inDebugMode"
+      },
+      {
+        "command": "extension.debugConfigurationType",
+        "title": "TEST debugConfigurationType",
+        "when": "debugConfigurationType == 'node'"
+      },
+      {
+        "command": "extension.callStackItemType",
+        "title": "TEST callStackItemType",
+        "when": "callStackItemType == 'stackFrame'"
+      },
+      {
+        "command": "extension.debugType",
+        "title": "TEST debugType",
+        "when": "debugType == 'node2'"
+      },
+      {
+        "command": "extension.inSnippetMode",
+        "title": "TEST inSnippetMode",
+        "when": "inSnippetMode"
+      },
+      {
+        "command": "extension.inQuickOpen",
+        "title": "TEST inQuickOpen",
+        "when": "inQuickOpen"
+      },
+      {
+        "command": "extension.resourceScheme",
+        "title": "TEST resourceScheme",
+        "when": "resourceScheme == file"
+      },
+      {
+        "command": "extension.resourceFileName",
+        "title": "TEST resourceFileName",
+        "when": "resourceFilename == gulpfile.js"
+      },
+      {
+        "command": "extension.resourceExtname",
+        "title": "TEST resourceExtname",
+        "when": "resourceExtname == .js"
+      },
+      {
+        "command": "extension.resourceLangId",
+        "title": "TEST resourceLangId",
+        "when": "resourceLangId == markdown"
+      },
+      {
+        "command": "extension.explorerViewletVisible",
+        "title": "TEST explorerViewletVisible",
+        "when": "explorerViewletVisible"
+      },
+      {
+        "command": "extension.explorerViewletFocus",
+        "title": "TEST explorerViewletFocus",
+        "when": "explorerViewletFocus"
+      },
+      {
+        "command": "extension.filesExplorerFocus",
+        "title": "TEST filesExplorerFocus",
+        "when": "filesExplorerFocus"
+      },
+      {
+        "command": "extension.openEditorsFocus",
+        "title": "TEST !openEditorsFocus",
+        "when": "!openEditorsFocus"
+      },
+      {
+        "command": "extension.explorerResourceIsFolder",
+        "title": "TEST explorerResourceIsFolder",
+        "when": "explorerResourceIsFolder"
+      },
+      {
+        "command": "extension.findWidgetVisible",
+        "title": "TEST findWidgetVisible",
+        "when": "findWidgetVisible"
+      },
+      {
+        "command": "extension.suggestWidgetVisible",
+        "title": "TEST suggestWidgetVisible",
+        "when": "suggestWidgetVisible"
+      },
+      {
+        "command": "extension.suggestWidgetMultipleSuggestions",
+        "title": "TEST suggestWidgetMultipleSuggestions",
+        "when": "suggestWidgetMultipleSuggestions"
+      },
+      {
+        "command": "extension.renameInputVisible",
+        "title": "TEST renameInputVisible",
+        "when": "renameInputVisible"
+      },
+      {
+        "command": "extension.referenceSearchVisible",
+        "title": "TEST referenceSearchVisible",
+        "when": "referenceSearchVisible"
+      },
+      {
+        "command": "extension.parameterHintsVisible",
+        "title": "TEST parameterHintsVisible",
+        "when": "parameterHintsVisible"
+      },
+      {
+        "command": "extension.parameterHintsMultipleSignatures",
+        "title": "TEST parameterHintsMultipleSignatures",
+        "when": "parameterHintsMultipleSignatures"
+      },
+      {
+        "command": "extension.terminalFocus",
+        "title": "TEST terminalFocus",
+        "when": "terminalFocus"
+      },
+      {
+        "command": "extension.notificationFocus",
+        "title": "TEST !notificationFocus",
+        "when": "!notificationFocus"
+      },
+      {
+        "command": "extension.notificationCenterVisible",
+        "title": "TEST !notificationCenterVisible",
+        "when": "!notificationCenterVisible"
+      },
+      {
+        "command": "extension.notificationToastsVisible",
+        "title": "TEST notificationToastsVisible",
+        "when": "notificationToastsVisible"
+      },
+      {
+        "command": "extension.searchViewletVisible",
+        "title": "TEST searchViewletVisible",
+        "when": "searchViewletVisible"
+      },
+      {
+        "command": "extension.searchViewletFocus",
+        "title": "TEST searchViewletFocus",
+        "when": "searchViewletFocus"
+      },
+      {
+        "command": "extension.inputBoxFocus",
+        "title": "TEST inputBoxFocus",
+        "when": "inputBoxFocus"
+      },
+      {
+        "command": "extension.searchInputBoxFocus",
+        "title": "TEST searchInputBoxFocus",
+        "when": "searchInputBoxFocus"
+      },
+      {
+        "command": "extension.replaceInputBoxFocus",
+        "title": "TEST replaceInputBoxFocus",
+        "when": "replaceInputBoxFocus"
+      },
+      {
+        "command": "extension.patternIncludesInputBoxFocus",
+        "title": "TEST patternIncludesInputBoxFocus",
+        "when": "patternIncludesInputBoxFocus"
+      },
+      {
+        "command": "extension.patternExcludesInputBoxFocus",
+        "title": "TEST patternExcludesInputBoxFocus",
+        "when": "patternExcludesInputBoxFocus"
+      },
+      {
+        "command": "extension.replaceActive",
+        "title": "TEST replaceActive",
+        "when": "replaceActive"
+      },
+      {
+        "command": "extension.hasSearchResult",
+        "title": "TEST hasSearchResult",
+        "when": "hasSearchResult"
+      },
+      {
+        "command": "extension.sidebarVisible",
+        "title": "TEST sidebarVisible",
+        "when": "sidebarVisible"
+      },
+      {
+        "command": "extension.sideBarFocus",
+        "title": "TEST sideBarFocus",
+        "when": "sideBarFocus"
+      },
+      {
+        "command": "extension.panelFocus",
+        "title": "TEST panelFocus",
+        "when": "panelFocus"
+      },
+      {
+        "command": "extension.inDebugRepl",
+        "title": "TEST inDebugRepl",
+        "when": "inDebugRepl"
+      },
+      {
+        "command": "extension.editorIsOpen",
+        "title": "TEST editorIsOpen",
+        "when": "editorIsOpen"
+      },
+      {
+        "command": "extension.textCompareEditorVisible",
+        "title": "TEST textCompareEditorVisible",
+        "when": "textCompareEditorVisible"
+      },
+      {
+        "command": "extension.workspaceFolderCount",
+        "title": "TEST workspaceFolderCount",
+        "when": "workspaceFolderCount == 1"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "extension.editorFocus",
+          "when": "editorFocus"
+        },
+        {
+          "command": "extension.editorTextFocus",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "extension.textInputFocus",
+          "when": "textInputFocus"
+        },
+        {
+          "command": "extension.inputFocus",
+          "when": "inputFocus"
+        },
+        {
+          "command": "extension.editorHasSelection",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "extension.editorHasMultipleSelections",
+          "when": "editorHasMultipleSelections"
+        },
+        {
+          "command": "extension.editorReadOnly",
+          "when": "editorReadOnly"
+        },
+        {
+          "command": "extension.editorLangId",
+          "when": "editorLangId == typescript"
+        },
+        {
+          "command": "extension.isInDiffEditor",
+          "when": "isInDiffEditor"
+        },
+        {
+          "command": "extension.isLinux",
+          "when": "isLinux"
+        },
+        {
+          "command": "extension.isMac",
+          "when": "isMac"
+        },
+        {
+          "command": "extension.isWindows",
+          "when": "isWindows"
+        },
+        {
+          "command": "extension.inDebugMode",
+          "when": "inDebugMode"
+        },
+        {
+          "command": "extension.debugConfigurationType",
+          "when": "debugConfigurationType == 'node'"
+        },
+        {
+          "command": "extension.callStackItemType",
+          "when": "callStackItemType == 'stackFrame'"
+        },
+        {
+          "command": "extension.debugType",
+          "when": "debugType == 'node2'"
+        },
+        {
+          "command": "extension.inSnippetMode",
+          "when": "inSnippetMode"
+        },
+        {
+          "command": "extension.inQuickOpen",
+          "when": "inQuickOpen"
+        },
+        {
+          "command": "extension.resourceScheme",
+          "when": "resourceScheme == file"
+        },
+        {
+          "command": "extension.resourceFileName",
+          "when": "resourceFilename == gulpfile.js"
+        },
+        {
+          "command": "extension.resourceExtname",
+          "when": "resourceExtname == .js"
+        },
+        {
+          "command": "extension.resourceLangId",
+          "when": "resourceLangId == markdown"
+        },
+        {
+          "command": "extension.explorerViewletVisible",
+          "when": "explorerViewletVisible"
+        },
+        {
+          "command": "extension.explorerViewletFocus",
+          "when": "explorerViewletFocus"
+        },
+        {
+          "command": "extension.filesExplorerFocus",
+          "when": "filesExplorerFocus"
+        },
+        {
+          "command": "extension.openEditorsFocus",
+          "when": "!openEditorsFocus"
+        },
+        {
+          "command": "extension.explorerResourceIsFolder",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "extension.findWidgetVisible",
+          "when": "findWidgetVisible"
+        },
+        {
+          "command": "extension.suggestWidgetVisible",
+          "when": "suggestWidgetVisible"
+        },
+        {
+          "command": "extension.suggestWidgetMultipleSuggestions",
+          "when": "suggestWidgetMultipleSuggestions"
+        },
+        {
+          "command": "extension.renameInputVisible",
+          "when": "renameInputVisible"
+        },
+        {
+          "command": "extension.referenceSearchVisible",
+          "when": "referenceSearchVisible"
+        },
+        {
+          "command": "extension.parameterHintsVisible",
+          "when": "parameterHintsVisible"
+        },
+        {
+          "command": "extension.parameterHintsMultipleSignatures",
+          "when": "parameterHintsMultipleSignatures"
+        },
+        {
+          "command": "extension.terminalFocus",
+          "when": "terminalFocus"
+        },
+        {
+          "command": "extension.notificationFocus",
+          "when": "!notificationFocus"
+        },
+        {
+          "command": "extension.notificationCenterVisible",
+          "when": "!notificationCenterVisible"
+        },
+        {
+          "command": "extension.notificationToastsVisible",
+          "when": "notificationToastsVisible"
+        },
+        {
+          "command": "extension.searchViewletVisible",
+          "when": "searchViewletVisible"
+        },
+        {
+          "command": "extension.searchViewletFocus",
+          "when": "searchViewletFocus"
+        },
+        {
+          "command": "extension.inputBoxFocus",
+          "when": "inputBoxFocus"
+        },
+        {
+          "command": "extension.searchInputBoxFocus",
+          "when": "searchInputBoxFocus"
+        },
+        {
+          "command": "extension.replaceInputBoxFocus",
+          "when": "replaceInputBoxFocus"
+        },
+        {
+          "command": "extension.patternIncludesInputBoxFocus",
+          "when": "patternIncludesInputBoxFocus"
+        },
+        {
+          "command": "extension.patternExcludesInputBoxFocus",
+          "when": "patternExcludesInputBoxFocus"
+        },
+        {
+          "command": "extension.replaceActive",
+          "when": "replaceActive"
+        },
+        {
+          "command": "extension.hasSearchResult",
+          "when": "hasSearchResult"
+        },
+        {
+          "command": "extension.sidebarVisible",
+          "when": "sidebarVisible"
+        },
+        {
+          "command": "extension.sideBarFocus",
+          "when": "sideBarFocus"
+        },
+        {
+          "command": "extension.panelFocus",
+          "when": "panelFocus"
+        },
+        {
+          "command": "extension.inDebugRepl",
+          "when": "inDebugRepl"
+        },
+        {
+          "command": "extension.editorIsOpen",
+          "when": "editorIsOpen"
+        },
+        {
+          "command": "extension.textCompareEditorVisible",
+          "when": "textCompareEditorVisible"
+        },
+        {
+          "command": "extension.workspaceFolderCount",
+          "when": "workspaceFolderCount == 1"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "yarn run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^3.1.4",
+    "vscode": "^1.1.25",
+    "@types/node": "^8.10.25",
+    "@types/mocha": "^2.2.42"
+  }
+}
